@@ -63,7 +63,7 @@ else if (flags & F_PLUS)
 extra_ch = '+';
 else if (flags & F_SPACE)
 extra_ch = ' ';
-return (write_num(ind, buffer, flags, width, precision,
+return (write_number(ind, buffer, flags, width, precision,
 length, padd, extra_ch));
 }
 /**
@@ -79,7 +79,7 @@ length, padd, extra_ch));
 *
 * Return: Number of printed chars.
 */
-int write_num(int ind, char buffer[],
+int write_number(int ind, char buffer[],
 int flags, int width, int prec,
 int length, char padd, char extra_c)
 {
@@ -218,7 +218,7 @@ buffer[2] = 'x';
 return (write(1, &buffer[padd_start], i - padd_start) +
 write(1, &buffer[ind], length - (1 - padd_start) - 2));
 }
-}
+{
 buffer[--ind] = 'x';
 buffer[--ind] = '0';
 if (extra_c)
