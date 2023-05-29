@@ -1,4 +1,5 @@
 #include "main.h"
+
 /************************* WRITE HANDLE *************************/
 /**
 * handle_write_char - Prints a string
@@ -36,6 +37,7 @@ write(1, &buffer[0], 1));
 }
 return (write(1, &buffer[0], 1));
 }
+
 /************************* WRITE NUMBER *************************/
 /**
 * write_number - Prints a string
@@ -66,6 +68,7 @@ extra_ch = ' ';
 return (write_number(ind, buffer, flags, width, precision,
 length, padd, extra_ch));
 }
+
 /**
 * write_num - Write a number using a bufffer
 * @ind: Index at which the number starts on the buffer
@@ -123,6 +126,7 @@ if (extra_c)
 buffer[--ind] = extra_c;
 return (write(1, &buffer[ind], length));
 }
+
 /**
 * write_unsgnd - Writes an unsigned number
 * @is_negative: Number indicating if the num is negative
@@ -171,6 +175,7 @@ return (write(1, &buffer[0], i) + write(1, &buffer[ind], length));
 }
 return (write(1, &buffer[ind], length));
 }
+
 /**
 * write_pointer - Write a memory address
 * @buffer: Arrays of chars
