@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 /****************** PRINT POINTER ******************/
 /**
 * print_pointer - Prints the value of a pointer variable
@@ -15,8 +14,7 @@ int print_pointer(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
 char extra_c = 0, padd = ' ';
-int ind = BUFF_SIZE - 2, length = 2, padd_start = 1;
-/* length=2, for '0x' */
+int ind = BUFF_SIZE - 2, length = 2, padd_start = 1; /* length=2, for '0x' */
 unsigned long num_addrs;
 char map_to[] = "0123456789abcdef";
 void *addrs = va_arg(types, void *);
@@ -46,7 +44,7 @@ width, flags, padd, extra_c, padd_start));
 }
 /************************* PRINT NON PRINTABLE *************************/
 /**
-* print_non_printable - Prints ascii codes in hexa of non printable chars
+* print_non_printable - Prints ascii codes in hexa of non printable char
 * @types: Lista of arguments
 * @buffer: Buffer array to handle print
 * @flags:  Calculates active flags
@@ -60,7 +58,7 @@ int flags, int width, int precision, int size)
 {
 int i = 0, offset = 0;
 char *str = va_arg(types, char *);
-UNUSED(flags);
+uNUSED(flags);
 UNUSED(width);
 UNUSED(precision);
 UNUSED(size);
@@ -162,4 +160,3 @@ count++;
 }
 return (count);
 }
-
