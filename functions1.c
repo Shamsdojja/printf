@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 /************************* PRINT UNSIGNED NUMBER *************************/
 /**
 * print_unsigned - Prints an unsigned number
@@ -26,7 +25,7 @@ buffer[i--] = (num % 10) + '0';
 num /= 10;
 }
 i++;
-return (print_unsigned(0, i, buffer, flags, width, precision, size));
+return (write_unsgnd(0, i, buffer, flags, width, precision, size));
 }
 /************* PRINT UNSIGNED NUMBER IN OCTAL  ****************/
 /**
@@ -58,7 +57,7 @@ num /= 8;
 if (flags & F_HASH && init_num != 0)
 buffer[i--] = '0';
 i++;
-return (print_unsigned(0, i, buffer, flags, width, precision, size));
+return (write_unsgnd(0, i, buffer, flags, width, precision, size));
 }
 /************** PRINT UNSIGNED NUMBER IN HEXADECIMAL **************/
 /**

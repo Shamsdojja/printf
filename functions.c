@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 /************************* PRINT CHAR *************************/
 /**
 * print_char - Prints a char
