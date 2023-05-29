@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 * is_printable - Evaluates if a char is printable
 * @c: Char to be evaluated.
@@ -11,6 +12,7 @@ if (c >= 32 && c < 127)
 return (1);
 return (0);
 }
+
 /**
 * append_hexa_code - Append ascci in hexadecimal code to buffer
 * @buffer: Array of chars.
@@ -30,6 +32,7 @@ buffer[i++] = map_to[ascii_code / 16];
 buffer[i] = map_to[ascii_code % 16];
 return (3);
 }
+
 /**
 * is_digit - Verifies if a char is a digit
 * @c: Char to be evaluated
@@ -42,6 +45,7 @@ if (c >= '0' && c <= '9')
 return (1);
 return (0);
 }
+
 /**
 * convert_size_number - Casts a number to the specified size
 * @num: Number to be casted.
@@ -57,6 +61,7 @@ else if (size == S_SHORT)
 return ((short)num);
 return ((int)num);
 }
+
 /**
 * convert_size_unsgnd - Casts a number to the specified size
 * @num: Number to be casted
