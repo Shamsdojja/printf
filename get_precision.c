@@ -24,7 +24,7 @@ precision += format[curr_i] - '0';
 else if (format[curr_i] == '*')
 {
 curr_i++;
-precision = va_argu(list, int);
+precision = va_arg(list, int);
 break;
 }
 else
